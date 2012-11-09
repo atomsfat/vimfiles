@@ -1,3 +1,4 @@
+let mapleader = "º"
 "avoiding annoying CSApprox warning message
 let g:CSApprox_verbose_level = 0
 
@@ -181,9 +182,9 @@ function! s:Median(nums)
 endfunction
 
 "indent settings
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set autoindent
 
@@ -238,7 +239,7 @@ if has("gui_running")
     if has("gui_gnome")
         set term=gnome-256color
         colorscheme molokai
-        set guifont=Monospace\ Bold\ 12
+        set guifont=Monospace\ 11
     endif
 
     if has("gui_mac") || has("gui_macvim")
@@ -280,6 +281,12 @@ inoremap <C-L> <C-O>:nohls<CR>
 
 "map to bufexplorer
 nnoremap <leader>b :BufExplorer<cr>
+"map to bufergator
+let g:buffergator_suppress_keymaps = 1
+nnoremap <leader>bg :BuffergatorToggle<cr>
+
+"disable resizing when calling buffergator
+let g:buffergator_autoexpand_on_split = 0
 
 "map to CommandT TextMate style finder
 nnoremap <leader>t :CommandT<CR>
