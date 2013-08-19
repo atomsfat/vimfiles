@@ -1,4 +1,4 @@
-let mapleader = "º"
+let mapleader = ","
 "avoiding annoying CSApprox warning message
 let g:CSApprox_verbose_level = 0
 
